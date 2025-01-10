@@ -6,7 +6,7 @@ import json
 
 app = FastAPI()
 
-JSON_FILES_DIR = "data/json_files"
+JSON_FILES_DIR = "app/data/json_files/"
 
 
 @app.post("/upload/")
