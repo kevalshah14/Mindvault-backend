@@ -36,10 +36,10 @@ async def upload_file(file: UploadFile = File(...)):
         # Handle unexpected errors
         raise HTTPException(status_code=500, detail=f"Internal Server Error: {e}")
 
-@app.get("/get-json/")
+@app.get("/get-json/{file_name}")
 async def get_json_file(file_name: str):
     """
-    API endpoint to retrieve a JSON file by name.
+    API endpoint to retrieve a JSON file by name (from the URL path).
 
     Args:
         file_name (str): Name of the JSON file to retrieve.
